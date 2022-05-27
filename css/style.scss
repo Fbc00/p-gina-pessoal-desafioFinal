@@ -1,0 +1,233 @@
+
+$primary-color: #6C757D;
+$second-color: #212529;
+$third-color: #CED4DA;
+$fourth-color: #dee2e6;
+$fifth-color: #adb5bd;
+$seventh-color: #495057;
+$ninth-color: #343a40;
+$gamer-font: 'VT323', monospace;
+$second-font: 'Montserrat', sans-serif;
+html, body, site-wrapper, ul {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+.site-wrapper {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    &>.canvas-color {
+        background-color: $ninth-color;
+    }
+
+}
+.heade-js {
+    background-color: transparent;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 7rem;
+    background-color: transparent;
+
+  
+    &>.identification {
+      
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        max-width: 1440px;
+        width: 100%;
+        height: 50%;
+
+        &>.btn-canvaOff{
+           
+            cursor: pointer;
+            border: none;
+            float: right;
+            background: transparent;
+            width: 50px;
+            height: 50px;
+        
+
+            img {
+                width: 30px;
+            }
+        }
+
+        & p {
+            font-family: $gamer-font;
+            letter-spacing: 0.5rem;
+            font-size: 3.5rem;
+        }
+    }
+    &>.nav-bar-canvas{
+        
+        &>.offCanvas{
+            color: $fourth-color;
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background-color: $seventh-color;
+           
+            transform: translateX(100%);
+            transition: all 1500ms cubic-bezier(.19, 1, .22, 1);
+
+            &>.exit {
+                top: 1.5rem;
+                left: 1.5rem;
+                position: absolute;
+                color: $fourth-color;
+                font-size: 2rem;
+                cursor: pointer;
+                border: none;
+                float: right;
+                background: transparent;
+                width: 50px;
+                height: 50px;
+    
+            }
+        
+            &>ul {
+                font-family: $gamer-font;
+                display: flex;
+                justify-content: center;
+                gap: 4.5rem;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 0.5rem;
+                font-size: 2.5rem;
+            }
+
+        }
+        &>.canvas-active {
+            transform: none;
+            transition: all 1500ms cubic-bezier(.19, 1, .22, 1);
+         
+        }
+       
+    }
+}
+.mid {
+    
+    display: flex;
+    top: 7rem;
+    background-image: linear-gradient(to bottom, $second-color, $seventh-color);
+    width: 100%;
+    height: 100%;
+
+    &>.sub-section {   
+        font-size: 4rem;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        width: 50%;
+        height: 100%;
+
+        &>img {
+           width: 25rem;
+           align-items: flex-start;
+        }
+        &>.micro-sction  {
+            width: 500px;
+            color: white;
+            font-family: $second-font;
+            font-family: $gamer-font;
+            padding: 1rem;
+            height: 10rem;
+
+            &>.nomeExibido {
+                font-size: 4rem;
+                border-right: 0.5rem solid $third-color;
+                margin: 0 auto;
+                letter-spacing: 2rem; 
+                animation: 
+                    blink-caret .75s step-end infinite;
+
+            }
+
+         
+        }
+        &>.locale {
+            display: flex;
+            flex-direction: row;
+            &>.local-home {
+                padding: 1rem;
+                font-size: 1.6rem;
+                width: 40%;
+                height: 70px;
+                border-left: solid 0.3rem $third-color;
+            }
+        }
+    }
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, $second-color, $seventh-color);
+        
+    &>.resume {
+        letter-spacing: 0.3rem;
+        font-family: $second-font;
+        font-family: $gamer-font;
+        color: $fourth-color;
+        margin-left: 13.2rem;
+        font-size: 3rem;
+        border-bottom: solid 0.3rem red;
+        width: 7rem;
+    }
+    
+    
+    &>.sub-about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        gap: 1.5rem;
+        width: 100%;
+        
+        &>.mini-about {
+            background-color: $ninth-color;
+            box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
+            align-self: center;
+            width: 25%;
+            height: 500px;
+
+        }
+        &>.red {
+            border-top: 0.5rem solid red;
+        }
+        &>.yellow {
+            align-self: flex-end;
+            border-top: 0.5rem solid rgb(255, 255, 0);
+        }
+        &>.blue {
+            border-top: 0.5rem solid blue;
+        }
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: $primary-color; }
+  }
