@@ -9,6 +9,8 @@ $ninth-color: #343a40;
 $gamer-font: 'VT323', monospace;
 $second-font: 'Montserrat', sans-serif;
 html, body, site-wrapper, ul {
+    
+    scroll-behavior: auto;
     font-size: 16px;
     list-style: none;
     padding: 0;
@@ -16,6 +18,10 @@ html, body, site-wrapper, ul {
     box-sizing: border-box;
     height: 100%;
 }
+a{
+    text-decoration: none;
+}
+
 .site-wrapper {
     font-family: $second-font;
     font-family: $gamer-font;
@@ -26,6 +32,11 @@ html, body, site-wrapper, ul {
     }
 
 }
+.identification, .sub-about, .sub-section, .aside-second-section {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+}
 .heade-js {
     background-color: transparent;
     top: 0;
@@ -35,19 +46,15 @@ html, body, site-wrapper, ul {
     justify-content: center;
     position: fixed;
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     background-color: transparent;
 
   
     &>.identification {
-      
-        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         color: white;
-        max-width: 1440px;
-        width: 100%;
         height: 50%;
 
         &>.btn-canvaOff{
@@ -130,7 +137,6 @@ html, body, site-wrapper, ul {
     &>.sub-section {   
         font-size: 4rem;
         align-self: center;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -172,33 +178,31 @@ html, body, site-wrapper, ul {
 }
 
 
+
 .about {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-image: linear-gradient(to top, $second-color, $seventh-color);
         
     &>.resume {
         letter-spacing: 0.3rem;
-       
         color: $fourth-color;
-        margin-left: 14rem;
-        font-size: 3rem;
-        border-bottom: solid 0.3rem red;
+        font-size: 4rem;
+        border-bottom: solid 0.3rem yellow; 
         width: 7rem;
         bottom: 0;
     }
     
     
     &>.sub-about {
-        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 700px;
         gap: 1.5rem;
-        width: 100%;
         
         &>.mini-about {
             font-size: 1.7rem;
@@ -207,10 +211,11 @@ html, body, site-wrapper, ul {
             background-color: $second-color;
             box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
             align-self: center;
-            width: 23%;
+            width: 27%;
             height: 600px;
             line-height: 1.7rem;
             & hr {
+                
                 margin: 0;
                 left: 0;
                 border-radius: 1rem;
@@ -224,6 +229,7 @@ html, body, site-wrapper, ul {
             line-height: 1.5rem;
             border-top: 0.3rem solid red;
             &> hr {
+                background-color: red;
                 border-top: solid 0.3rem red;
              
             }
@@ -232,6 +238,7 @@ html, body, site-wrapper, ul {
             align-self: flex-end;
             border-top: 0.3rem solid rgb(255, 255, 0);
             &> hr {
+                background-color: yellow;
                 border-top: solid 0.3rem yellow;
           
             }
@@ -240,6 +247,7 @@ html, body, site-wrapper, ul {
 
             border-top: 0.3rem solid blue;
             & hr {
+                background-color: blue;
                 border-top: solid 0.3rem blue;
              
             }
@@ -253,7 +261,32 @@ html, body, site-wrapper, ul {
     }
 }
 
+
+.second-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, $seventh-color, $second-color);
+    &>.aside-second-section {
+        align-self: center;
+        height: 700px;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
+        background-color: $seventh-color;
+         
+    }
+            & img{
+                width: 525px;
+                height: 600px;
+            }
+}
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: $primary-color; }
   }
+
+
+ 
