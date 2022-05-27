@@ -17,10 +17,10 @@ html, body, site-wrapper, ul {
     height: 100%;
 }
 .site-wrapper {
+    font-family: $second-font;
+    font-family: $gamer-font;
     width: 100%;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Sarabun', sans-serif;
+    height: 100%;   
     &>.canvas-color {
         background-color: $ninth-color;
     }
@@ -66,7 +66,7 @@ html, body, site-wrapper, ul {
         }
 
         & p {
-            font-family: $gamer-font;
+    
             letter-spacing: 0.5rem;
             font-size: 3.5rem;
         }
@@ -101,7 +101,6 @@ html, body, site-wrapper, ul {
             }
         
             &>ul {
-                font-family: $gamer-font;
                 display: flex;
                 justify-content: center;
                 gap: 4.5rem;
@@ -146,8 +145,6 @@ html, body, site-wrapper, ul {
         &>.micro-sction  {
             width: 500px;
             color: white;
-            font-family: $second-font;
-            font-family: $gamer-font;
             padding: 1rem;
             height: 10rem;
 
@@ -158,10 +155,7 @@ html, body, site-wrapper, ul {
                 letter-spacing: 2rem; 
                 animation: 
                     blink-caret .75s step-end infinite;
-
             }
-
-         
         }
         &>.locale {
             display: flex;
@@ -187,13 +181,13 @@ html, body, site-wrapper, ul {
         
     &>.resume {
         letter-spacing: 0.3rem;
-        font-family: $second-font;
-        font-family: $gamer-font;
+       
         color: $fourth-color;
-        margin-left: 13.2rem;
+        margin-left: 14rem;
         font-size: 3rem;
         border-bottom: solid 0.3rem red;
         width: 7rem;
+        bottom: 0;
     }
     
     
@@ -207,22 +201,54 @@ html, body, site-wrapper, ul {
         width: 100%;
         
         &>.mini-about {
-            background-color: $ninth-color;
+            font-size: 1.7rem;
+            padding: 2rem;
+            color: $third-color;
+            background-color: $second-color;
             box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
             align-self: center;
-            width: 25%;
-            height: 500px;
-
+            width: 23%;
+            height: 600px;
+            line-height: 1.7rem;
+            & hr {
+                margin: 0;
+                left: 0;
+                border-radius: 1rem;
+                width: 8rem;
+            }
+            
+           
         }
+
         &>.red {
-            border-top: 0.5rem solid red;
+            line-height: 1.5rem;
+            border-top: 0.3rem solid red;
+            &> hr {
+                border-top: solid 0.3rem red;
+             
+            }
         }
         &>.yellow {
             align-self: flex-end;
-            border-top: 0.5rem solid rgb(255, 255, 0);
+            border-top: 0.3rem solid rgb(255, 255, 0);
+            &> hr {
+                border-top: solid 0.3rem yellow;
+          
+            }
         }
         &>.blue {
-            border-top: 0.5rem solid blue;
+
+            border-top: 0.3rem solid blue;
+            & hr {
+                border-top: solid 0.3rem blue;
+             
+            }
+
+            &> ul {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+           
         }
     }
 }
