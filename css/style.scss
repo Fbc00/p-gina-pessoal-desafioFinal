@@ -1,4 +1,3 @@
-
 $primary-color: #6C757D;
 $second-color: #212529;
 $third-color: #CED4DA;
@@ -6,11 +5,17 @@ $fourth-color: #dee2e6;
 $fifth-color: #adb5bd;
 $seventh-color: #495057;
 $ninth-color: #343a40;
-$gamer-font: 'VT323', monospace;
-$second-font: 'Montserrat', sans-serif;
-html, body, site-wrapper, ul {
-    
-    scroll-behavior: auto;
+$gamer-font: 'VT323',
+monospace;
+$second-font: 'Montserrat',
+sans-serif;
+
+html,
+body,
+site-wrapper,
+ul {
+
+    scroll-behavior: smooth;
     font-size: 16px;
     list-style: none;
     padding: 0;
@@ -18,30 +23,53 @@ html, body, site-wrapper, ul {
     box-sizing: border-box;
     height: 100%;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
 .site-wrapper {
+
     font-family: $second-font;
     font-family: $gamer-font;
     width: 100%;
-    height: 100%;   
+    height: 100%;
+
     &>.canvas-color {
         background-color: $ninth-color;
     }
 
+    &>.icons {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        position: fixed;
+        top: 25rem;
+        width: 5rem;
+        left: 1.2rem;
+        gap: 1rem;
+
+    }
+
 }
-.identification, .sub-about, .sub-section, .aside-second-section {
+
+.identification,
+.sub-about,
+.sub-section,
+.aside-second-section,
+.img-sub,
+.sub-footer {
+
     display: flex;
     width: 100%;
     max-width: 1440px;
 }
+
 .heade-js {
     background-color: transparent;
     top: 0;
     display: flex;
-    flex-direction: row;
+
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -49,7 +77,7 @@ a{
     height: 6rem;
     background-color: transparent;
 
-  
+
     &>.identification {
         flex-direction: row;
         align-items: center;
@@ -57,15 +85,15 @@ a{
         color: white;
         height: 50%;
 
-        &>.btn-canvaOff{
-           
+        &>.btn-canvaOff {
+
             cursor: pointer;
             border: none;
             float: right;
             background: transparent;
             width: 50px;
             height: 50px;
-        
+
 
             img {
                 width: 30px;
@@ -73,14 +101,15 @@ a{
         }
 
         & p {
-    
+
             letter-spacing: 0.5rem;
             font-size: 3.5rem;
         }
     }
-    &>.nav-bar-canvas{
-        
-        &>.offCanvas{
+
+    &>.nav-bar-canvas {
+
+        &>.offCanvas {
             color: $fourth-color;
             position: fixed;
             width: 20%;
@@ -88,10 +117,15 @@ a{
             right: 0;
             top: 0;
             background-color: $seventh-color;
-           
+
             transform: translateX(100%);
             transition: all 1500ms cubic-bezier(.19, 1, .22, 1);
-
+            & a {
+                color: $fourth-color;
+                &:hover {
+                    color: $third-color;
+                }
+            }
             &>.exit {
                 top: 1.5rem;
                 left: 1.5rem;
@@ -104,10 +138,11 @@ a{
                 background: transparent;
                 width: 50px;
                 height: 50px;
-    
+
             }
-        
+
             &>ul {
+                color: #dee2e6;
                 display: flex;
                 justify-content: center;
                 gap: 4.5rem;
@@ -118,23 +153,24 @@ a{
             }
 
         }
+
         &>.canvas-active {
             transform: none;
             transition: all 1500ms cubic-bezier(.19, 1, .22, 1);
-         
+
         }
-       
+
     }
 }
+
 .mid {
-    
     display: flex;
     top: 7rem;
     background-image: linear-gradient(to bottom, $second-color, $seventh-color);
     width: 100%;
     height: 100%;
 
-    &>.sub-section {   
+    &>.sub-section {
         font-size: 4rem;
         align-self: center;
         flex-direction: column;
@@ -145,10 +181,11 @@ a{
         height: 100%;
 
         &>img {
-           width: 25rem;
-           align-items: flex-start;
+            width: 25rem;
+            align-items: flex-start;
         }
-        &>.micro-sction  {
+
+        &>.micro-sction {
             width: 500px;
             color: white;
             padding: 1rem;
@@ -158,17 +195,18 @@ a{
                 font-size: 4rem;
                 border-right: 0.5rem solid $third-color;
                 margin: 0 auto;
-                letter-spacing: 2rem; 
-                animation: 
+                letter-spacing: 2rem;
+                animation:
                     blink-caret .75s step-end infinite;
             }
         }
+
         &>.locale {
             display: flex;
-            flex-direction: row;
+
             &>.local-home {
                 padding: 1rem;
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 width: 40%;
                 height: 70px;
                 border-left: solid 0.3rem $third-color;
@@ -186,77 +224,82 @@ a{
     width: 100%;
     height: 90%;
     background-image: linear-gradient(to top, $second-color, $seventh-color);
-        
+
     &>.resume {
         letter-spacing: 0.3rem;
         color: $fourth-color;
         font-size: 4rem;
-        border-bottom: solid 0.3rem yellow; 
+        border-bottom: solid 0.3rem yellow;
         width: 7rem;
         bottom: 0;
     }
-    
-    
+
+
     &>.sub-about {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 700px;
         gap: 1.5rem;
-        
+
         &>.mini-about {
             font-size: 1.7rem;
             padding: 2rem;
             color: $third-color;
             background-color: $second-color;
-            box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
             align-self: center;
             width: 27%;
             height: 600px;
             line-height: 1.7rem;
+
             & hr {
-                
                 margin: 0;
                 left: 0;
                 border-radius: 1rem;
                 width: 8rem;
             }
-            
-           
+
+
         }
 
         &>.red {
             line-height: 1.5rem;
             border-top: 0.3rem solid red;
-            &> hr {
+
+            &>hr {
                 background-color: red;
                 border-top: solid 0.3rem red;
-             
+
             }
         }
+
         &>.yellow {
             align-self: flex-end;
             border-top: 0.3rem solid rgb(255, 255, 0);
-            &> hr {
+
+            &>hr {
                 background-color: yellow;
                 border-top: solid 0.3rem yellow;
-          
+
             }
         }
+
         &>.blue {
 
             border-top: 0.3rem solid blue;
+
             & hr {
                 background-color: blue;
                 border-top: solid 0.3rem blue;
-             
+
             }
 
-            &> ul {
+            &>ul {
                 font-size: 2rem;
                 line-height: 3rem;
             }
-           
+
         }
     }
 }
@@ -268,25 +311,123 @@ a{
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to top, $seventh-color, $second-color);
+
     &>.aside-second-section {
+        justify-content: space-evenly;
         align-self: center;
-        height: 700px;
         align-items: center;
-        padding: 1rem;
+        padding: 2.5rem 0;
         border-radius: 1rem;
-        box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.3);
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
         background-color: $seventh-color;
-         
+
+        & p {
+            font-size: 2.5rem;
+            color: $third-color;
+            text-align: justify;
+            width: 500px;
+        }
+
     }
-            & img{
-                width: 525px;
-                height: 600px;
-            }
+
+    & img {
+        
+        width: 30rem;
+        height: 45rem;
+    }
 }
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: $primary-color; }
-  }
 
+.sub-fim {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    background-image: linear-gradient(to bottom, $seventh-color, $second-color);
 
+    &>h2 {
+        font-size: 3rem;
+        color: $fourth-color;
+        letter-spacing: 0.5rem;
+
+    }
+
+    &>.img-sub {
+        justify-content: center;
+        gap: 2.5rem;
+        align-items: center;
  
+
+        &>img {
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+            height: 500px;
+            width: 350px;
+        }
+    }
+
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, $seventh-color, $second-color);
+    &>.form {
+        padding: 2rem 2rem;
+        background-color: #343a40;
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        border-radius: 0.5rem;
+
+
+        &>h2 {
+            font-size: 2rem;
+            color: $fourth-color;
+            letter-spacing: 0.5rem;
+        }
+
+        &>input, button {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            height: 3rem;
+
+            &:focus {
+                outline: none;
+                border: 1px solid blue;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &::placeholder {
+                font-size: 1.2rem;
+                letter-spacing: 0.2rem;
+            }
+
+        }
+
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: $primary-color;
+    }
+}
