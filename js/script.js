@@ -42,6 +42,7 @@ function sendEmail() {
         // this.contact_number.value = Math.random() * 100000 | 0;
         emailjs.sendForm('service_jgkj0my', 'template_7v6s6ez', this)
             .then(function(text) {
+                
                 alert('Your message has been sent!');
             }, function(error) {
                 alert('ocorreu um erro inesperado! tente novamente mais tarde.');

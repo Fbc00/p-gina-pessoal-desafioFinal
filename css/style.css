@@ -1,5 +1,8 @@
-html, body, site-wrapper, ul {
-  scroll-behavior: auto;
+html,
+body,
+site-wrapper,
+ul {
+  scroll-behavior: smooth;
   font-size: 16px;
   list-style: none;
   padding: 0;
@@ -41,7 +44,12 @@ a {
   gap: 1rem;
 }
 
-.identification, .sub-about, .sub-section, .aside-second-section, .img-sub, .sub-footer {
+.identification,
+.sub-about,
+.sub-section,
+.aside-second-section,
+.img-sub,
+.sub-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,6 +120,14 @@ a {
           transform: translateX(100%);
   -webkit-transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.heade-js > .nav-bar-canvas > .offCanvas a {
+  color: #dee2e6;
+}
+
+.heade-js > .nav-bar-canvas > .offCanvas a:hover {
+  color: #CED4DA;
 }
 
 .heade-js > .nav-bar-canvas > .offCanvas > .exit {
@@ -213,15 +229,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .mid > .sub-section > .locale > .local-home {
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   width: 40%;
   height: 70px;
   border-left: solid 0.3rem #CED4DA;
@@ -345,11 +357,10 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 700px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 2.5rem 0;
   border-radius: 1rem;
   -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
           box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
@@ -358,14 +369,14 @@ a {
 
 .second-section > .aside-second-section p {
   font-size: 2.5rem;
-  color: "Montserrat", sans-serif;
+  color: #CED4DA;
   text-align: justify;
   width: 500px;
 }
 
 .second-section img {
-  width: 525px;
-  height: 600px;
+  width: 30rem;
+  height: 45rem;
 }
 
 .sub-fim {
@@ -383,7 +394,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  height: 85%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#495057), to(#212529));
   background-image: linear-gradient(to bottom, #495057, #212529);
 }
@@ -395,28 +406,24 @@ a {
 }
 
 .sub-fim > .img-sub {
-  width: 100%;
-  background-color: #6C757D;
-  padding: 3rem;
-  border-radius: 1rem;
-  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 500px;
 }
 
 .sub-fim > .img-sub > img {
+  -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
   height: 500px;
   width: 350px;
 }
 
 .footer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,25 +433,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 750px;
   width: 100%;
-  height: 700px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#495057), to(#212529));
   background-image: linear-gradient(to bottom, #495057, #212529);
 }
 
-.footer > .sub-footer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-}
-
-.footer > .sub-footer > .form {
-  padding: 2rem;
+.footer > .form {
+  padding: 2rem 2rem;
   background-color: #343a40;
   -webkit-box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
           box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
@@ -455,53 +451,59 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1rem;
-  width: 500px;
+  gap: 1.5rem;
   border-radius: 0.5rem;
-  height: 500px;
 }
 
-.footer > .sub-footer > .form > h2 {
+.footer > .form > h2 {
   font-size: 2rem;
   color: #dee2e6;
   letter-spacing: 0.5rem;
 }
 
-.footer > .sub-footer > .form > input, .footer > .sub-footer > .form button {
-  padding: 0.3rem;
-  height: 50px;
+.footer > .form > input, .footer > .form button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  height: 3rem;
 }
 
-.footer > .sub-footer > .form > input:focus, .footer > .sub-footer > .form button:focus {
+.footer > .form > input:focus, .footer > .form button:focus {
   outline: none;
   border: 1px solid blue;
 }
 
-.footer > .sub-footer > .form > input::-webkit-input-placeholder, .footer > .sub-footer > .form button::-webkit-input-placeholder {
+.footer > .form > input:hover, .footer > .form button:hover {
+  opacity: 0.8;
+}
+
+.footer > .form > input::-webkit-input-placeholder, .footer > .form button::-webkit-input-placeholder {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
 }
 
-.footer > .sub-footer > .form > input:-ms-input-placeholder, .footer > .sub-footer > .form button:-ms-input-placeholder {
+.footer > .form > input:-ms-input-placeholder, .footer > .form button:-ms-input-placeholder {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
 }
 
-.footer > .sub-footer > .form > input::-ms-input-placeholder, .footer > .sub-footer > .form button::-ms-input-placeholder {
+.footer > .form > input::-ms-input-placeholder, .footer > .form button::-ms-input-placeholder {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
 }
 
-.footer > .sub-footer > .form > input::placeholder, .footer > .sub-footer > .form button::placeholder {
+.footer > .form > input::placeholder, .footer > .form button::placeholder {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
 }
 
 @-webkit-keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -510,7 +512,8 @@ a {
 }
 
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="/img/anonymus.png">
+    <link rel="icon" href="./img/anonymus.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=VT323&display=swap"
         rel="stylesheet">
@@ -18,9 +18,9 @@
 <body>
     <div class="site-wrapper">
         <div class="icons">
-            <span><a href="https://github.com/Fbc00"><img src="/img/icons8-github-50.png" alt=""></a> </span>
-            <span> <a href="https://www.linkedin.com/in/fabricio-assun%C3%A7%C3%A3o-654006228/"><img src="/img/icons8-linkedin-circundado-50.png" alt=""></a> </span>
-            <span><a href="https://www.instagram.com/fabbricio_/"><img src="/img/icons8-instagram-50.png" alt=""></a></span>
+            <span><a href="https://github.com/Fbc00"><img src="./img/icons8-github-50.png" alt=""></a> </span>
+            <span> <a href="https://www.linkedin.com/in/fabricio-assun%C3%A7%C3%A3o-654006228/"><img src="./img/icons8-linkedin-circundado-50.png" alt=""></a> </span>
+            <span><a href="https://www.instagram.com/fabbricio_/"><img src="./img/icons8-instagram-50.png" alt=""></a></span>
 
         </div>
         <header class="heade-js">
@@ -36,8 +36,8 @@
                     <ul>
                         <li> <img src="./img/anonymus.png" alt=""></li>
                         <a href="#sobre"><li> SOBRE MIM </li></a>
-                       <a><li>PROJETOS</li></a> 
-                      <a><li>CONTATOS</li></a> 
+                       <a href="#projeto"><li>PROJETOS</li></a> 
+                      <a href="#contato"><li>CONTATO</li></a> 
                     </ul>
                 </div>
             </nav>
@@ -118,7 +118,7 @@
             </aside>
         </section>
 
-        <div class="sub-fim">
+        <div class="sub-fim" id="projeto">
             <h2>Projetos</h2>
 
             <div class="img-sub"> 
@@ -130,9 +130,7 @@
 
 
         </div>
-        <footer class="footer">
-                    <div class="sub-footer">
-                        
+        <footer class="footer" id="contato"> 
                             <form action="" class="form" onsubmit="{sendEmail}">
                                 <h2>Entre em contato</h2>
                                 <input type="text" placeholder="nome" name="user_name">
@@ -141,13 +139,7 @@
                                 <textarea cols="60" rows="10" placeholder="Mensagem" name="message_user"></textarea>
                                 <button type="submit">Enviar</button>
                             </form>
-                    </div>
-                  
-                   
         </footer>
-
-
-
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/script.js"></script>
